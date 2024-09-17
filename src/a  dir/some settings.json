@@ -1,0 +1,9 @@
+{
+  "float number": 567.66,
+  "nested object": {
+    "nested list": [
+      "text",
+      1377
+    ]
+  }
+}

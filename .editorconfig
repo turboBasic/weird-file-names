@@ -1,0 +1,37 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 120
+tab_width = 4
+trim_trailing_whitespace = true
+
+[*.{,ba,z}sh]
+indent_size = 2
+tab_width = 2
+
+[{Makefile,*.mk}]
+indent_style = tab
+
+[*.{markdown,md}]
+trim_trailing_whitespace = false
+
+[*.json*]
+indent_size = 2
+
+[.*rc]
+indent_size = 2
+
+[*.xml]
+indent_size = 2
+insert_final_newline = false
+
+[*.y{a,}ml]
+indent_size = 2
+
+[LICENSE.txt]
+insert_final_newline = false

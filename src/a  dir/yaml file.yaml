@@ -1,0 +1,9 @@
+some item: 555
+other-item:
+  - some text
+  - |
+    more
+    and more
+nested item:
+  first: 1
+  2nd: 2
