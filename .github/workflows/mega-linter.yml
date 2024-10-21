@@ -1,0 +1,48 @@
+# More info at https://megalinter.io
+---
+name: MegaLinter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions: read-all
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true # Cancel previous runs in progress for the same workflow group (same branch and workflow)
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  megalinter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Pull
+        run: docker pull ghcr.io/turbobasic/megalinter:v8
+      - name: Lint
+        env:
+          # Validates all source when push on main, else just the git diff with
+          # main. Override with true if you always want to lint all sources
+          VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+          # To validate the entire codebase, set to:
+          # VALIDATE_ALL_CODEBASE: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:rw -v "$(pwd)":/tmp/lint:rw \
+              ghcr.io/turbobasic/megalinter:v8
+
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: megalinter-reports
+          path: |
+            megalinter-reports
+            mega-linter.log
