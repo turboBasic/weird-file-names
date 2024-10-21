@@ -13,7 +13,8 @@ Files are installed into `~/.local/share/weird-file-names/` directory.
 - Files with space in the name within directory with spaces in the name: [a  dir/some settings.json]
 - Nested directories with spaces in the name: [a  dir/b  dir/c   .txt]
 - Executable files with spaces in the name: [a  dir/script file.sh]
-- Files with new lines in the name: [file<br>with<br>new lines.txt] &nbsp; &nbsp; :warning: even GitHub can't provide it to the browser :relaxed: 
+- Files with new lines in the name: [file<br>with<br>new lines.txt] &nbsp; &nbsp;<br/>
+(_even GitHub can't show it in the browser_ :relaxed:)
 - Files and dirs with Emojis: [dir with 💩 emoji/.file with emoji 💩 rc]
 
 ## Installation

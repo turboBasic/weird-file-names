@@ -20,10 +20,8 @@ If you experience bugs or general issues with weird-file-names-💩, please have
 on the [issue tracker].
 If you don't see anything useful there, please feel free to fire an issue report.
 
-!!! tip
-    Please don't forget to include the closed issues in your search.
-    Sometimes a solution was already reported, and the problem is considered
-    **solved**.
+> 💡&nbsp; Please don't forget to include the closed issues in your search.
+Sometimes a solution was already reported, and the problem is considered **solved**.
 
 New issue reports should include information about your programming environment
 (e.g., operating system, Python version) and steps to reproduce the problem.
@@ -36,19 +34,14 @@ you help us to identify the root cause of the issue.
 You can help improve the documentation of weird-file-names-💩 by making them more readable
 and coherent, or by adding missing information and correcting mistakes.
 
-!!! tip
-      Please notice that the [GitHub web interface] provides a quick way for
-      proposing changes. While this mechanism can be tricky for normal code contributions,
-      it works perfectly fine for contributing to the docs, and can be quite handy.
-
-      If you are interested in trying this method out, please navigate to
-      the appropriate folder in the source [repository], find which file you
-      would like to propose changes and click in the little pencil icon at the
-      top, to open [GitHub's code editor]. Once you finish editing the file,
-      please write a message in the form at the bottom of the page describing
-      which changes have you made and what are the motivations behind them and
-      submit your proposal.
-
+> 💡&nbsp; Please notice that the [GitHub web interface] provides a quick way for
+proposing changes. While this mechanism can be tricky for normal code contributions,
+it works perfectly fine for contributing to the docs, and can be quite handy.<br/><br/>
+If you are interested in trying this method out, please navigate to the appropriate folder
+in the source [repository], find which file you would like to propose changes and click in
+the little pencil icon at the top, to open [GitHub's code editor]. Once you finish editing
+the file, please write a message in the form at the bottom of the page describing which
+changes have you made and what are the motivations behind them and submit your proposal.
 
 ## Code Contributions
 
@@ -63,73 +56,70 @@ This often provides additional considerations and avoids unnecessary work.
 1. Create a user account on GitHub if you do not already have one.
 
 2. Fork the project [repository]: click on the *Fork* button near the top of the
-   page. This creates a copy of the code under your account on GitHub.
+page. This creates a copy of the code under your account on GitHub.
 
 3. Clone this copy to your local disk:
 
-   ```console
-   git clone git@github.com:YourLogin/weird-file-names.git
-   cd weird-file-names
-   ```
+    ```console
+    git clone git@github.com:YourLogin/weird-file-names.git
+    cd weird-file-names
+    ```
 
 ### Implement your changes
 
 1. Create a branch to hold your changes:
 
-   ```console
-   git switch --create feature/my-feature
-   ```
-
-   and start making changes. Never work on the main branch!
+    ```console
+    git switch --create feature/my-feature
+    ```
+    and start making changes. Never work on the main branch!
 
 2. Add yourself to the list of contributors in `AUTHORS.md`.
 
 3. When you’re done editing, do:
 
-   ```console
-   git add <MODIFIED FILES>
-   git commit
-   ```
+    ```console
+    git add <MODIFIED FILES>
+    git commit
+    ```
+    to record your changes in [git].
 
-   to record your changes in [git].
-
-
-    !!! info
-        Don't forget to add documentation in case your
-        contribution adds a feature and is not just a bugfix.
-
-        Moreover, writing an [descriptive commit message] is highly recommended.
-        In case of doubt, you can check the commit history with:
-        ```
-        git log --graph --decorate --pretty=oneline --abbrev-commit --all
-        ```
-        to look for recurring communication patterns.
+    > 💡&nbsp; Don't forget to add documentation in case your contribution adds a feature and is not
+    > just a bugfix. Moreover, writing a [descriptive commit message] is highly recommended. In
+    > case of doubt, you can check the commit history with:
+    > `git log --graph --decorate --pretty=oneline --abbrev-commit --all`
+    > to look for recurring communication patterns.
 
 
 ### Submit your contribution
 
 1. If everything works fine, push your local branch to the remote server with:
 
-   ```console
-   git push --set-upstream origin feature/my-feature
-   ```
+    ```console
+    git push --set-upstream origin feature/my-feature
+    ```
 
-2. Go to the web page of your fork and click "Create pull request"
-   to send your changes for review.
+2. Go to the web page of your fork and click "Create pull request" to send your changes for
+review.<br/><br/>
+Find more detailed information in [creating a PR]. You might also want to open the PR as a
+draft first and mark it as ready for review after the feedbacks from the continuous integration
+(CI) system or any required fixes.
 
-   Find more detailed information in [creating a PR]. You might also want to open
-   the PR as a draft first and mark it as ready for review after the feedbacks
-   from the continuous integration (CI) system or any required fixes.
 
 [^contrib1]: Even though, these resources focus on open source projects and
-    communities, the general ideas behind collaborating with other developers
-    to collectively create software are general and can be applied to all sorts
-    of environments, including private companies and proprietary code bases.
+communities, the general ideas behind collaborating with other developers
+to collectively create software are general and can be applied to all sorts
+of environments, including private companies and proprietary code bases.
 
 [contribution-guide.org]: http://www.contribution-guide.org/
-[creating a PR]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
 [git]: https://git-scm.com
+
+[//]: editorconfig-checker-disable-next-line
+[creating a PR]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
+[//]: editorconfig-checker-disable-next-line
 [github web interface]: https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository
+
 [other kinds of contributions]: https://opensource.guide/how-to-contribute
 [python software foundation's code of conduct]: https://www.python.org/psf/conduct/
 [Google style]: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
